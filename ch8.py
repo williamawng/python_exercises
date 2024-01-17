@@ -24,3 +24,10 @@ print(kingdoms[-1])
 print(kingdoms[:-3])
 print(kingdoms[-4:-1])
 print(kingdoms[-2:])
+appointments = ['9:00', '10:30', '14:00', '15:00', '15:30']
+print(appointments)
+# appointments.append('16:30')
+print(appointments)
+appointments = appointments + ['16:30']
+print(appointments)
+"""The second method is the one that created a new list due to the fact that if you remove 'appointments = ' the function doesn't work."""
