@@ -78,3 +78,41 @@ for i in range(5):
         text += "*"
     text += "\n"
 print(text)
+
+def is_longer(L1: list, L2: list) -> bool:
+    if len(L1) > len(L2):
+        return True
+    else:
+        return False
+
+print(is_longer([1, 2, 3], [2, 3]))
+print(is_longer([1, 2, 3], [4, 5, 6]))
+
+
+values = [0, 1, 2]
+print(values)
+values[1] = values
+print("[0]", values[0])
+print("[1]", values[1])
+print("[2]", values[2])
+for curr in values[1]:
+    print("CURRENT:", curr)
+
+units = [['km', 'miles', 'league'], ['kg','pound', 'stone']]
+print(units[0])
+print(units[1])
+print(units[0][0])
+print(units[1][0])
+print(units[0][1:])
+print(units[1][:2])
+
+print("-"*10)
+
+print(units[-2])
+print(units[-1])
+print(units[-2][-3])
+print(units[-1][-3])
+print(units[-2][-2:])
+print(units[-1][:-1])
+
+
