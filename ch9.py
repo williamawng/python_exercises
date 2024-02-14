@@ -62,3 +62,54 @@ inner = ['F', 'Cl', 'Br']
 for metal in outer:
     for halogen in inner:
         print(metal + halogen)
+
+#Exercise 1
+
+print("-" * 15)
+
+celegans_phenotypes = ['Emb', 'Him', 'Unc', 'Lon', 'Dpy', 'Sma']
+
+for cele in celegans_phenotypes:
+    print(cele)
+
+half_lives = [87.74, 24110.0, 6537.0, 14.4, 376000.0]
+
+for i in range(len(half_lives)):
+    print(half_lives[i])
+
+whales = [5, 4, 7, 3, 2, 3, 2, 6, 4, 2, 1, 7, 1, 3]
+more_whales = []
+print(more_whales)
+for wha in whales:
+   w =  wha + 1
+   more_whales.append(w)
+print(more_whales) 
+
+alkaline_earth_metals = [['beryllium', 4, 9.012], ['magnesium', 12, 24.305], ['calcium', 20, 40.078], ['strontium', 38, 87.62], ['barium', 56, 137.327], ['radium', 88, 226]]
+for i in range(len(alkaline_earth_metals)):
+    for j in range(len(alkaline_earth_metals[i])):
+        print(alkaline_earth_metals[i][j])
+print('->' * 10)
+for alk in alkaline_earth_metals:
+    for al in alk:
+        print(al)
+number_and_weight = []
+for i in range(len(alkaline_earth_metals)):
+    number_and_weight.append(alkaline_earth_metals[i][1:])
+print(number_and_weight)
+
+v = number_and_weight
+def mystery_function(values):
+    """ This function will go through each element in a list and adds the 
+    first element in the sublist to a new list called result and will return it.
+    """
+    result = [] # create an empty list
+    for sublist in values: # go through each element in values
+        result.append([sublist[0]]) # adds the first element in sublist to result
+        for i in sublist[1:]: # for each element in sublist from the second element to the end
+            print("RESULT:", result, "RESULT[-1]:", result[-1])
+
+            result[-1].insert(0, i) # inserting element i at the index 0 of the last element of result
+    return result # returns the answer
+print(mystery_function(values=v))
+
