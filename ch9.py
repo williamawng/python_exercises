@@ -63,7 +63,7 @@ for metal in outer:
     for halogen in inner:
         print(metal + halogen)
 
-# 1
+#Exercise 1
 
 print("-" * 15)
 
@@ -72,14 +72,10 @@ celegans_phenotypes = ['Emb', 'Him', 'Unc', 'Lon', 'Dpy', 'Sma']
 for cele in celegans_phenotypes:
     print(cele)
 
-# 2
-
 half_lives = [87.74, 24110.0, 6537.0, 14.4, 376000.0]
 
 for i in range(len(half_lives)):
     print(half_lives[i])
-
-#3
 
 whales = [5, 4, 7, 3, 2, 3, 2, 6, 4, 2, 1, 7, 1, 3]
 more_whales = []
@@ -88,8 +84,6 @@ for wha in whales:
    w =  wha + 1
    more_whales.append(w)
 print(more_whales) 
-
-# 4
 
 alkaline_earth_metals = [['beryllium', 4, 9.012], ['magnesium', 12, 24.305], ['calcium', 20, 40.078], ['strontium', 38, 87.62], ['barium', 56, 137.327], ['radium', 88, 226]]
 for i in range(len(alkaline_earth_metals)):
@@ -104,7 +98,6 @@ for i in range(len(alkaline_earth_metals)):
     number_and_weight.append(alkaline_earth_metals[i][1:])
 print(number_and_weight)
 
-# 5
 v = number_and_weight
 def mystery_function(values):
     """ This function will go through each element in a list and adds the 
@@ -120,21 +113,16 @@ def mystery_function(values):
     return result # returns the answer
 print(mystery_function(values=v))
 
-# 6
-# text = ""
-# while text.lower() != "quit": # checks if text is not the same as "quit" after converting text into lowercase
-#     text = input("Please enter a chemical formula (or 'quit' to exit): ")
-#     if text.lower() == "quit": # checks if text is the same as "quit" after converting text into lowercase
-#         print("…exiting program")
-#     elif text == "H2O":
-#         print("Water")
-#     elif text == "NH3":
-#         print("Ammonia")
-#     elif text == "CH4":
-#         print("Methane")
-#     else:
-#         print("Unknown compound")
-
-# 7
-country_populations = [1295, 23, 7, 3, 47, 21]
-print(sum(country_populations))
+text = ""
+while text.lower() != "quit": # checks if text is not the same as "quit" after converting text into lowercase
+    text = input("Please enter a chemical formula (or 'quit' to exit): ")
+    if text.lower() == "quit": # checks if text is the same as "quit" after converting text into lowercase
+        print("…exiting program")
+    elif text == "H2O":
+        print("Water")
+    elif text == "NH3":
+        print("Ammonia")
+    elif text == "CH4":
+        print("Methane")
+    else:
+        print("Unknown compound")
