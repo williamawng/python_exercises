@@ -138,3 +138,84 @@ print(mystery_function(values=v))
 # 7
 country_populations = [1295, 23, 7, 3, 47, 21]
 print(sum(country_populations))
+
+total = 0
+for cp in country_populations:
+    total = total + cp
+
+print(total, "Total")
+
+# 8
+rat_1 = [2, 3, 3.5, 2.5, 3, 2, 1.5, 4, 3.5, 2]
+rat_2 = [1.99, 2, 4.5, 1.5, 4, 1, 2.5, 5, 2.5, 3]
+
+if rat_1[0] > rat_2[0]:
+    print("Rat 1 weighed more than rat 2 on day 1.")
+else:
+    print("Rat 1 weighed less than rat 2 on day 1.")
+
+if rat_1[0] > rat_2[0]:
+    if rat_1[-1] > rat_2[-1]:
+        print("Rat 1 remained heavier than Rat 2.")
+    else:
+        print("Rat 2 became heavier than Rat 1.")
+
+if rat_1[0] > rat_2[0] and rat_1[-1] > rat_2[-1]:
+    print("Rat 1 remained heavier than Rat 2.")
+else:
+    print("Rat 2 became heavier than Rat 1.")
+
+# 9
+for i in range(33, 50):
+    print(i)
+
+# 10
+numbers = list(range(10, 0, -1))
+print(numbers)
+
+numbers2 = [str(n) for n in numbers]
+# print(numbers2)
+print(", ".join(numbers2))
+
+# 11
+sum = 0
+numbers3 = list(range(2, 23))
+for num in numbers3:
+    # sum = num + sum
+    sum += num
+
+print(sum / len(numbers3))
+
+# 12
+from typing import List
+def remove_neg(num_list: List[float]) -> None:
+    """Remove the negative numbers from the list num_list.
+    >>> numbers = [-5, 1, -3, 2]
+    >>> remove_neg(numbers)
+    >>> numbers
+    [1, 2]
+    """
+    neg_nums = []
+    for item in num_list:
+        if item < 0:
+            neg_nums.append(item)
+    
+    print("NEG_NUMS:", neg_nums)
+    
+    for neg in neg_nums:
+        num_list.remove(neg)
+
+numbers = [1, 2, 3, -3, 6, -1, -3, 1]
+# remove_neg(numbers)
+# print(numbers)
+
+def remove_neg2(num_list: List[float]) -> List[float]:
+    my_list = []    # creating a new list. we are going to add only positive numbers
+                    # to this one.
+    # how do I remove negative numbers from num_list?
+    for item in num_list:
+        if item >= 0:
+            my_list.append(item)
+    return my_list
+
+print(remove_neg2(numbers))
