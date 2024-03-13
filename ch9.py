@@ -219,3 +219,59 @@ def remove_neg2(num_list: List[float]) -> List[float]:
     return my_list
 
 print(remove_neg2(numbers))
+
+# 13
+def draw_t(rows, columns):
+    for i in range(rows-1, -1, -1):
+        for j in range(i, columns, 1):
+            # print(f"{i} {j}")
+            print("T", end="")
+        print("")
+
+print("-"*10)
+draw_t(7, 7)
+print("-"*10)
+
+# 14
+def draw_t2(rows, columns):
+    for i in range(rows):
+        for j in range(columns):
+            # print(f"{i} {j}")
+            if j >= (columns-1 - i):
+                print("T", end="")
+            else:
+                print(" ", end="")
+        print("")
+
+draw_t2(7, 7)
+
+# 15
+
+
+weight = 10
+
+weeks = 0
+while (weight < 100):
+    weeks += 1
+    print("10 lbs gained this week.")
+    weight = weight + 10
+
+print(f"It took {weeks} weeks.")
+
+# 16
+rat_1_weight = 10
+rat_2_weight = 15
+rat_1_rate = 0.04
+rat_2_rate = 0.04
+
+twenty_five_pct_of_rat1 = rat_1_weight * 0.25
+final_w = rat_1_weight + twenty_five_pct_of_rat1
+weeks = 0
+
+while rat_1_weight < final_w:
+    weeks += 1
+    rat_1_weight = rat_1_weight + (rat_1_weight*rat_1_rate)
+    print(f"rat 1 weight after week 1: {rat_1_weight}")
+
+print(f"rat 1 weight is {rat_1_weight}")
+print(f"It took {weeks} weeks for rat 1 to become 25% heavier.")
