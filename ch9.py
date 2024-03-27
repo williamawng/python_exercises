@@ -246,17 +246,47 @@ def draw_t2(rows, columns):
 draw_t2(7, 7)
 
 # 15
+print("-"*10)
+
+def draw_t_w(rows, columns):
+    i = rows -1
+    while i > -1:
+        j = i
+        while j < columns:
+            print("T", end="")
+            j = j + 1
+        print("")
+        i = i - 1
+
+draw_t_w(7, 7)
+
+print("-"*10)
+
+def draw_t2_w(rows, columns):
+    for i in range(rows):
+        for j in range(columns):
+            # print(f"{i} {j}")
+            if j >= (columns-1 - i):
+                print("T", end="")
+            else:
+                print(" ", end="")
+        print("")
+draw_t2_w(3,3)
 
 
-weight = 10
+#########################################
+# this is while loop practice.
+# weight = 10
 
-weeks = 0
-while (weight < 100):
-    weeks += 1
-    print("10 lbs gained this week.")
-    weight = weight + 10
+# weeks = 0
+# while (weight < 100):
+#     weeks += 1
+#     print("10 lbs gained this week.")
+#     weight = weight + 10
 
-print(f"It took {weeks} weeks.")
+# print(f"It took {weeks} weeks.")
+#########################################
+
 
 # 16
 rat_1_weight = 10
@@ -275,3 +305,21 @@ while rat_1_weight < final_w:
 
 print(f"rat 1 weight is {rat_1_weight}")
 print(f"It took {weeks} weeks for rat 1 to become 25% heavier.")
+
+weeks = 0
+rat_1_weight = 10
+rat_2_weight = 10
+rat_1_rate = 0.02
+rat_2_rate = 0.01
+
+# print(rat_2_weight)
+# print(rat_2_weight + rat_2_weight * .10)
+
+while rat_1_weight <= (rat_2_weight + rat_2_weight * .10):
+    weeks += 1
+    rat_1_weight = rat_1_weight + (rat_1_weight * rat_1_rate)
+    rat_2_weight = rat_2_weight + (rat_2_weight * rat_2_rate)
+    print(f"Week {weeks}: rat_1_weight is {rat_1_weight} and rat_2_weight is {rat_2_weight}")
+
+print(f"It took {weeks} weeks for rat 1 to be 10% heavier than rat 2.")
+
