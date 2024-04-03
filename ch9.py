@@ -243,7 +243,7 @@ def draw_t2(rows, columns):
                 print(" ", end="")
         print("")
 
-draw_t2(7, 7)
+draw_t2(3, 3)
 
 # 15
 print("-"*10)
@@ -263,14 +263,21 @@ draw_t_w(7, 7)
 print("-"*10)
 
 def draw_t2_w(rows, columns):
-    for i in range(rows):
-        for j in range(columns):
-            # print(f"{i} {j}")
+    # for i in range(rows):
+    #     for j in range(columns):
+    #         # print(f"{i} {j}")
+    i = 0
+    while i < rows:
+        j = 0
+        while j < columns:
             if j >= (columns-1 - i):
                 print("T", end="")
             else:
                 print(" ", end="")
+            j = j + 1
         print("")
+        i = i + 1
+
 draw_t2_w(3,3)
 
 
@@ -319,7 +326,7 @@ while rat_1_weight <= (rat_2_weight + rat_2_weight * .10):
     weeks += 1
     rat_1_weight = rat_1_weight + (rat_1_weight * rat_1_rate)
     rat_2_weight = rat_2_weight + (rat_2_weight * rat_2_rate)
-    print(f"Week {weeks}: rat_1_weight is {rat_1_weight} and rat_2_weight is {rat_2_weight}")
+    # print(f"Week {weeks}: rat_1_weight is {rat_1_weight} and rat_2_weight is {rat_2_weight}")
 
 print(f"It took {weeks} weeks for rat 1 to be 10% heavier than rat 2.")
 
