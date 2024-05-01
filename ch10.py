@@ -81,3 +81,8 @@ if __name__ == '__main__':
     with open('number_pairs.txt', 'r') as input_file, \
         open('number_pair_sums.txt', 'w') as output_file:
         sum_number_pairs(input_file, output_file)
+
+import read_smallest
+s_num = read_smallest.smallest_value(open('hebron.txt', 'r'))
+print(f"Smallest number is {s_num}")
+
