@@ -86,3 +86,60 @@ import read_smallest
 s_num = read_smallest.smallest_value(open('hebron.txt', 'r'))
 print(f"Smallest number is {s_num}")
 
+
+# EXERCISES
+
+# 1
+# file_name = input("Enter a file name:")
+# with open(file_name, 'r') as input_file:
+#     lines = input_file.readlines()
+# with open(f"{file_name}.bak", 'w') as output_file:
+#     for el in lines:
+#         output_file.write(el)
+
+# 2
+
+file_name = "alkaline_metals.txt"
+with open(file_name, 'r') as input_file:
+    lines = input_file.readlines()
+
+alkaline_metals = []
+for line in lines:
+    line.strip()
+    alkaline_metals.append(line.split())
+print(alkaline_metals)
+print("-"*20)
+
+# 3
+
+for line in reversed(list(open(file_name))):
+    print(line.strip())
+
+print("-"*10)
+print("OR")
+print("-"*10)
+
+for line in reversed(list(open(file_name))):
+    tmp = line.strip()
+    print(tmp[::-1])
+print("-"*20)
+
+# 4
+
+with open("lynx.dat", 'r') as input_file:
+    header = input_file.readline()
+    rest = input_file.readlines()
+
+lynx = []
+for line in rest:
+    # print(line.strip())
+    if line.startswith("#"):
+        pass
+    else:
+        lynx.append(line.split())
+
+print(lynx)
+print("-"*20)
+
+# 5
+
