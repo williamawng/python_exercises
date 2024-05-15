@@ -153,3 +153,4 @@ print("-"*20)
 #     if i == 5:
 #         break
 #     print(i)
+print(min([5, 6, 7,8]))

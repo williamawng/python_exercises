@@ -50,8 +50,9 @@ def smallest_value(reader: TextIO) -> int:
                 continue
             value = int(line)
             # If we find a smaller value, remember it.
-            if value < smallest:
-                smallest = value
+            # if value < smallest:
+            #     smallest = value
+            smallest = min([value, smallest])
         return smallest
     else:
         return 0
