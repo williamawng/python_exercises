@@ -143,3 +143,13 @@ print("-"*20)
 
 # 5
 
+# Refer to read_smallest.py
+
+# 6
+
+# Refer to read_smallest.py
+
+# for i in range(10):
+#     if i == 5:
+#         break
+#     print(i)
