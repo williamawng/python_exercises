@@ -154,3 +154,24 @@ print("-"*20)
 #         break
 #     print(i)
 print(min([5, 6, 7,8]))
+
+
+# 7
+# refer to mulimol.py
+
+str1 = " \t"
+str2 = "William"
+
+print(f"|{str1}|")
+print(f"|{str1.strip()}|")
+if str1 and str1.strip():
+    print("True")
+else:
+    print("False")
+
+print(str2)
+print(str2.strip())
+if str2 and str2.strip():
+    print("True")
+else:
+    print("False")
