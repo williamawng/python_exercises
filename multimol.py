@@ -26,6 +26,7 @@ def read_molecule(reader: TextIO) -> list:
     molecule = [name]
 
     reading = True
+    cnt = 0
     while reading:
         line = reader.readline()
         # line = line.rstrip("\n")
@@ -38,6 +39,11 @@ def read_molecule(reader: TextIO) -> list:
             if (line and line.strip()):
                 # print(f"|{line}|")
                 parts = line.split()
+                cnt += 1
+                if cnt != int(parts[1]):
+                    print("Atoms serial number not in order.")
+                    print(f"It should be {cnt}. Instead, we got {parts[1]}.")
+                    exit()
                 molecule.append(parts[2:])
 
     return molecule
