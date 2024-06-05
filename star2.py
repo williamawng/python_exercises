@@ -16,7 +16,7 @@ while True:
     else:
         wn.bgcolor(0.68, 0.93, 0.93)
     cnt += 1
-    print(turtle.pos())
+    # print(turtle.pos())
     if abs(turtle.pos()) < 1:
         break
 
