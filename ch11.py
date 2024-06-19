@@ -51,9 +51,10 @@ print(life[2][0])
 (x, y) = (10, 20)
 print(x)
 print(y)
-
+print("EXCERSISES")
+print("-"*20)
 # 1
-
+print("1")
 def find_dups(l):
     my_set = set()
     for item in l:
@@ -64,5 +65,66 @@ def find_dups(l):
 
 m = find_dups([1, 2, 3, 4,4,4,4,5,5,6,7,8,9,9])
 print(m)
-
+print("-"*20)
 # 2
+print("2")
+print("Refer to Multimol2.py")
+print("-"*20)
+# 3
+print("3")
+males = {"James", "Juilian", "Jared", "Jack", "Jeremy"}
+females = {"Julia", "Jasmine", "Juliet", "Jane", "Joy"}
+def pairs (x, y):
+    all_pairs = []
+    for i in range(5):
+        male = x.pop()
+        female = y.pop()
+        tmp_tuple = (male, female)
+        all_pairs.append(tmp_tuple)
+    return all_pairs
+
+p = pairs(males, females)
+print(p)
+print("-"*20)
+# 4
+print("4")
+
+print("SKIP")
+
+print("-"*20)
+# 5
+
+print("5")
+
+colours = {'red': 1, 'green': 1, 'blue': 2, 'white': 7}
+def count_values (x):
+    count = set()
+    for k, v in x.items():
+        print(f"KEY:{k}; VALUE:{v}")
+        count.add(v)
+    return len(count)
+
+c = count_values(colours)
+print(f"ANSWER: {c}")
+
+print("-"*20)
+# 6
+
+print("6")
+
+particles = {'neutron': 0.55, 'proton': 0.21, 'meson': 0.03, 'muon': 0.07, 'neutrino': 0.14}
+def least_likely_obsv(x):
+    # Using min() + list comprehension + values()
+    # Finding min value keys in dictionary
+    # print(x.values()) # this will give you all the values in the dictionary
+    # print(min(x.values())) # find the min of all the values.
+    temp = min(x.values())
+    res = [k for k in x if x[k] == temp] # get the key of the min.
+    return res
+least_likely = least_likely_obsv(particles)
+print(least_likely)
+
+print("-"*20)
+# 7
+
+print("7")
