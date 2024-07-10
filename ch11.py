@@ -128,3 +128,163 @@ print("-"*20)
 # 7
 
 print("7")
+
+students = {'student1': 'James', 'student2': 'William', 'student3': 'William', 'student4': 'James', 'student5': 'Cecilia', 'student6': 'Cecilia', 'student7': 'Andrew', 'student8': 'Andrew'}
+def count_duplicates(x):
+    seen = {}
+    cnt = 0
+    for k, v in x.items():
+        # print(f"KEY:{k}; VALUE:{v}")
+        if seen.get(v): # I have seen this item
+            # hence, increment the count
+            cnt += 1
+        else:
+            # I haven't seen this item. So set the dictionary value to 1 (for seen{})
+            seen[v] = 1
+
+    return cnt
+
+
+print(f'ANSWER: {count_duplicates(students)}')
+
+print("-"*20)
+# 8
+
+print("8")
+
+balanced_colour = {'R': 0.2, 'G': 0.5, 'B': 0.3}
+def is_balanced(colour):
+    total = 0
+    for k, v in colour.items():
+        print(k, v)
+        total += v
+    if total == 1:
+        return True
+    else:
+        return False
+
+print(is_balanced(balanced_colour))
+
+print("-"*20)
+# 9
+
+print("9")
+
+colour = {'R': 0.2, 'G': 0.5, 'B': 0.3, 'green': 1}
+colours = {'R': 0.2, 'green': 1, 'blue': 2, 'white': 7}
+def dict_intersect(x, y):
+    z = {}
+    for k, v in x.items():
+        # print(k,v)
+        if y.get(k):
+            y_val = y.get(k)
+            if v == y_val:
+                z[k] = v
+
+    return z
+
+print(f'ANSWER: {dict_intersect(colour, colours)}')
+
+print("-"*20)
+# 10
+
+print("10")
+
+scientists = {
+    'jgoodall' :    {
+                        'surname' : 'Goodall',
+                        'forename' : 'Jane',
+                        'born' : 1934,
+                        'died' : None,
+                        'notes' : 'primate researcher',
+                        'author' : ['In the Shadow of Man',
+                        'The Chimpanzees of Gombe']
+                    },
+    'rfranklin' :   {
+                        'surname' : 'Franklin',
+                        'forename' : 'Rosalind',
+                        'born' : 1920,
+                        'died' : 1957,
+                        'notes' : 'contributed to discovery of DNA',
+                        # 'author' : ['hi']
+                    },
+    'rcarson' :     {
+                        'surname' : 'Carson',
+                        'forename' : 'Rachel',
+                        'born' : 1907,
+                        'died' : 1964,
+                        'notes' : 'raised awareness of effects of DDT',
+                        'author' : ['Silent Spring'],
+                    }
+}
+
+def db_headings(d):
+    headings = set()
+    for k,v in d.items():
+        # print(k,v)
+        for i, j in v.items():
+            # print(i, j)
+            headings.add(i)
+    return headings
+
+print(f'ANSWER: {db_headings(scientists)}')
+
+print("-"*20)
+# 11
+
+print("11")
+
+def db_consistent(d):
+    previous = set()
+    for k,v in d.items():
+        # print(k,v)
+        for i, j in v.items():
+            # print(i, j)
+            if not previous:
+                previous = set(v)
+            else:
+                current = set(v)
+                diff = previous - current
+                if diff:
+                    return False
+    return True
+
+print(f'ANSWER: {db_consistent(scientists)}')
+
+print("-"*20)
+# 12
+
+print("12")
+
+A = {0:1, 6:3}
+B = {0:4, 6:1}
+
+def sparse_add(a,b):
+    answer = {}
+    for key in set(list(a.keys()) + list(b.keys())):
+        # print(f'key: {key}')
+        a_val = a.get(key) or 0
+        b_val = b.get(key) or 0
+        answer[key] = a_val + b_val
+
+    return answer
+
+
+print(f'ANSWER A: {sparse_add(A,B)}')
+
+def sparse_mul(a,b):
+    total = 0
+    answer = {}
+    for key in set(list(a.keys()) + list(b.keys())):
+        # print(f'key: {key}')
+        a_val = a.get(key) or 0
+        b_val = b.get(key) or 0
+        answer[key] = a_val * b_val
+    for k, v in answer.items():
+        total += v
+    return total
+
+
+print(f'ANSWER B: {sparse_mul(A,B)}')
+
+print(f'ANSWER C: I would need to ask her what are the dimensions/length of the vector. ')
