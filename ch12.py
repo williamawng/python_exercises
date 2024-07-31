@@ -20,14 +20,42 @@ print(find_two_smallest(counts))
 t2 = time.perf_counter()
 t = (t2 - t1) * 1000
 print(f"The code took {t}ms ")
+
 def sim_find2smallest(l):
+    if len(l) < 2:
+        return "ERROR: LIST NEEDS TO HAVE AT LEAST TWO ELEMENTS"
+    min1_indices = []
+    min2_indices = []
     l2 = l.copy()
     l2.sort()
     min1 = l2[0]
     min2 = l2[1]
+    for item in l2:
+        if min1 == min2:
+            min2 = item
+
+
+    # first smallest
     min1_index = l.index(min1)
-    min2_index = l.index(min2)
-    return (min1_index, min2_index)
+    min1_indices.append(min1_index)
+    l[min1_index] = -1
+    while (min1 in l):
+        min1_index = l.index(min1)
+        min1_indices.append(min1_index)
+        print(f"We have another {min1} in the list and the index is {min1_index}")
+        l[min1_index] = -1
+
+    # second smallest
+    min2_index = l.index(min2)      # find the index
+    min2_indices.append(min2_index) # append the index to the list that will be returned
+    l[min2_index] = -1              # set the value of the min2 to arbitary value, -1
+    while (min2 in l):              # while there are still the second smallest elements in the list
+        min2_index = l.index(min2)  # repeat the process of appending and arbitary setting to -1.
+        min2_indices.append(min2_index)
+        print(f"We have another {min2} in the list and the index is {min2_index}")
+        l[min2_index] = -1
+    return (min1_indices, min2_indices)
+
 t1 = time.perf_counter()
 print(sim_find2smallest(counts))
 t2 = time.perf_counter()
@@ -112,3 +140,21 @@ print(f'ANSWER MAX:{min_or_max_index(counts, min = False)}')
 t2 = time.perf_counter()
 t = (t2 - t1) * 1000
 print(f"The code took {t}ms ")
+print("-"*20)
+# 5
+
+print("5")
+test_list = []
+
+print(f'ANSWER: {sim_find2smallest(test_list)}')
+
+print("-"*20)
+# 6
+
+print("6")
+
+test_list = [4, 5, 4, 2, 10, 13, 2, 2, 4]
+
+print(f"TEST_LIST: {test_list}")
+
+print(f'ANSWER: {sim_find2smallest(test_list)}')
