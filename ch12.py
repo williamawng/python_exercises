@@ -158,3 +158,43 @@ test_list = [4, 5, 4, 2, 10, 13, 2, 2, 4]
 print(f"TEST_LIST: {test_list}")
 
 print(f'ANSWER: {sim_find2smallest(test_list)}')
+
+print("-"*20)
+# 7
+
+print("7")
+
+colours = ["blue", "red", "green", "red", "blue", "green",  "red", "blue", "green", "red", "green", "blue", "blue", "red", "green", "red", "blue", "red", "green"]
+
+def dutch_flag_update(c):
+    c.sort(reverse = True)
+    return c
+
+t1 = time.perf_counter()
+print(dutch_flag_update(colours))
+t2 = time.perf_counter()
+t = (t2 - t1) * 1000
+print(f"The code took {t}ms ")
+
+def dutch_flag(c):
+
+    # the order we want is red, green, blue
+
+    number_of_red = c.count("red")
+    number_of_green = c.count("green")
+    number_of_blue = c.count("blue")
+    order_colours = []
+    for i in range(number_of_red):
+        order_colours.append("red")
+    for i in range(number_of_green):
+        order_colours.append("green")
+    for i in range(number_of_blue):
+        order_colours.append("blue")
+
+    return order_colours
+
+t1 = time.perf_counter()
+print(dutch_flag(colours))
+t2 = time.perf_counter()
+t = (t2 - t1) * 1000
+print(f"The code took {t}ms ")
