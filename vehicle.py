@@ -2,24 +2,24 @@ class Vehicle:
 
     def __init__(self):
         self.num_of_wheels = 0
-    
+
     def move_backward(self):
-        pass
+        return "I am moving backwards"
 
     def move_forward(self):
-        pass
+        return "I am moving forwards"
 
     def has_motor(self):
-        pass
+        return True
 
     def has_engine(self):
-        pass
+        return True
 
     def turn_left(self):
-        pass
+        return "I am turning left"
 
     def turn_right(self):
-        pass
+        return "I am turning right"
 
 
 
@@ -30,9 +30,10 @@ class Car(Vehicle):
 
     def how_many_wheels(self):
         return self.num_of_wheels
-      
+
     def has_motor(self):
         return self.motor
+
 
 class Truck(Vehicle):
     def __init__(self):
@@ -67,6 +68,6 @@ if __name__ == '__main__' :
     print(c.has_motor())
     print(t.has_motor())
     print(m.has_motor())
-    
+
 
 
