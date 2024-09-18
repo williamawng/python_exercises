@@ -8,6 +8,7 @@ cur = con.cursor()
 # con.commit()
 cur.execute('SELECT Region, Population, Size FROM PopByRegion')
 # print(cur.fetchone())
+# fetchmany() you can control the number of rows to retrieve from a db.
 regions = cur.fetchall()
 for region in regions:
     # print(region)
