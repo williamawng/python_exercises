@@ -87,7 +87,7 @@ print(more_whales)
 for wha in whales:
    w =  wha + 1
    more_whales.append(w)
-print(more_whales) 
+print(more_whales)
 
 # 4
 
@@ -107,7 +107,7 @@ print(number_and_weight)
 # 5
 v = number_and_weight
 def mystery_function(values):
-    """ This function will go through each element in a list and adds the 
+    """ This function will go through each element in a list and adds the
     first element in the sublist to a new list called result and will return it.
     """
     result = [] # create an empty list
@@ -199,9 +199,9 @@ def remove_neg(num_list: List[float]) -> None:
     for item in num_list:
         if item < 0:
             neg_nums.append(item)
-    
+
     print("NEG_NUMS:", neg_nums)
-    
+
     for neg in neg_nums:
         num_list.remove(neg)
 
