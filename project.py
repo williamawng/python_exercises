@@ -12,10 +12,10 @@ def add_to_calculation(symbol): # Defines a function that adds numbers into the 
 def evaluate_calculation(): # Defines a function that answers or evaluates the equation
     global calculation # Makes sure the string variable, calculation, is global
     try: # This 'tries' to do the things below:
-        calculation = str(eval(calculation)) # Makes 'calculation' = the evaluation of the answer
+        result = str(eval(calculation)) # Makes 'calculation' = the evaluation of the answer
         calculation = "" # Resets 'calculation' back to an empty string
         text_result.delete(1.0, "end")
-        text_result.insert(1.0, calculation)
+        text_result.insert(1.0, result)
     except: # If there is an error in the code then the things below happen:
         clear_field() # Calls the "clear_field()" function
         text_result.insert(1.0, "Error") # Inserts the word "Error"
